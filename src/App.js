@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import TodoListTemplate from './components/TodoListTemplate';
 import Form from './components/Form';
 import TodoItemList from './components/TodoItemList';
-
+import TimeCurrent from './components/TimeCurrent';
 
 class App extends Component {
 
@@ -81,6 +81,8 @@ class App extends Component {
     } = this;
 
     return (
+      <div>
+      <TimeCurrent/>
       <TodoListTemplate form={(
         <Form 
           value={input}
@@ -91,6 +93,7 @@ class App extends Component {
       )}>
         <TodoItemList todos={todos} onToggle={handleToggle} onRemove={handleRemove}/>
       </TodoListTemplate>
+      </div>
     );
   }
 }
